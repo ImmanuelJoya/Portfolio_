@@ -1,12 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Certifications from './components/Certifications';
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import SEO from './components/SEO';
+import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import Contact from './pages/Contact';
-import Footer from './components/Footer';
-import SEO from './components/SEO';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>
+          <Certifications />
           <Footer />
         </div>
       </Router>

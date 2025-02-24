@@ -10,14 +10,14 @@ const skills = [
       { name: "React", level: 80 },
       { name: "JavaScript", level: 85 },
       { name: "HTML/CSS", level: 95 },
-      { name: "Tailwind", level: 88 },
+      { name: "Tailwind/Bootstrap", level: 88 },
       { name: "Jquery", level: 75 },
     ],
   },
   {
     category: "Backend",
     items: [
-      { name: "Laravel", level: 60 },
+      { name: "FastAPI", level: 60 },
       { name: "Python", level: 70 },
       { name: "PHP", level: 75 },
       { name: "Go", level: 55 },

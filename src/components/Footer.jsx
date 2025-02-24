@@ -41,14 +41,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer
-      className="relative h-64 bg-gradient-to-b from-gray-900 to-black text-white flex items-center justify-center px-4 sm:px-6 lg:px-8"
-      style={{
-        background: 'radial-gradient(circle, rgba(2,0,36,1) 29%, rgba(19,72,134,1) 98%)',
-      }}
-    >
-      {/* Subtle overlay */}
-      <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+    <footer className="bg-gradient-to-b from-gray-950 to-black text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent opacity-30 pointer-events-none" />
 
       <motion.div
         className="max-w-7xl mx-auto text-center z-10"
@@ -58,12 +53,12 @@ const Footer = () => {
         variants={footerVariants}
       >
         {/* Links */}
-        <motion.div className="flex justify-center space-x-4 sm:space-x-6 mb-6" variants={footerVariants}>
+        <motion.div className="flex justify-center flex-wrap gap-4 sm:gap-6 mb-8" variants={footerVariants}>
           {navLinks.map((link) => (
             <motion.a
               key={link.text}
               href={link.href}
-              className="text-gray-400 text-sm hover:text-blue-300 transition-colors duration-300"
+              className="text-gray-400 text-sm hover:text-cyan-400 transition-colors duration-300"
               variants={childVariants}
               whileHover={{ y: -2 }}
             >
@@ -73,12 +68,12 @@ const Footer = () => {
         </motion.div>
 
         {/* Social Icons */}
-        <motion.div className="flex justify-center space-x-6 mb-6" variants={footerVariants}>
+        <motion.div className="flex justify-center gap-6 mb-8" variants={footerVariants}>
           {socialLinks.map((social) => (
             <motion.a
               key={social.label}
               href={social.href}
-              className="text-gray-400 text-2xl hover:text-blue-400 transition-colors duration-300"
+              className="text-gray-400 text-2xl hover:text-cyan-400 transition-colors duration-300"
               variants={childVariants}
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
@@ -94,7 +89,7 @@ const Footer = () => {
           className="text-gray-500 text-sm"
           variants={childVariants}
         >
-          © {new Date().getFullYear()} Your Company, Inc. All rights reserved.
+          © {new Date().getFullYear()} Immanuel Joya. All rights reserved.
         </motion.p>
       </motion.div>
     </footer>
