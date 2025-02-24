@@ -1,0 +1,16 @@
+# Environment Variables
+.env
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=root
+DB_PASSWORD=password
+DB_NAME=database
+
+SECRET_KEY=secret_key_here
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USERNAME=your_email@gmail.com
+SMTP_PASSWORD=your_password
+FROM_EMAIL=your_email@gmail.com".env" 
