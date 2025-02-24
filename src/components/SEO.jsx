@@ -7,12 +7,8 @@ const SEO = ({ title, description, keywords }) => {
     "Full Stack Developer specializing in creating beautiful, responsive, and user-friendly web applications using modern technologies and best practices.";
   const defaultKeywords = 
     "full stack developer, web developer, react developer, javascript developer, toronto developer";
-<<<<<<< HEAD
-   
-    
-=======
 
->>>>>>> d219dde2391f5c47a1fedae9626dcc3128ea9442
+
   return (
     <Helmet>
       <title>{title || defaultTitle}</title>

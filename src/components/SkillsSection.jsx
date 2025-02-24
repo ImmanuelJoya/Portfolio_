@@ -43,7 +43,7 @@ const SkillBar = ({ name, level, delay }) => {
   return (
     <motion.div
       ref={ref}
-      className="mb-6 group w-full max-w-md mx-auto"
+      className="mb-6 group"
       initial={{ opacity: 0, y: 15 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
       transition={{ duration: 0.5, delay, ease: "easeOut" }}
@@ -81,12 +81,12 @@ const SkillsSection = () => {
   return (
     <section
       ref={ref}
-      className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-950 to-black relative overflow-hidden flex items-center justify-center py-20"
+      className="min-h-screen py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-black relative overflow-hidden"
     >
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent opacity-50 pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -101,19 +101,19 @@ const SkillsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skillCategory, categoryIndex) => (
             <motion.div
               key={skillCategory.category}
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               animate={inView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.95 }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.2, ease: "easeOut" }}
-              className="bg-gray-800/40 backdrop-blur-md p-6 rounded-xl shadow-lg border border-gray-700/50 hover:border-blue-500/50 hover:shadow-xl transition-all duration-300 flex flex-col items-center"
+              className="bg-gray-800/40 backdrop-blur-md p-6 rounded-xl shadow-lg border border-gray-700/50 hover:border-blue-500/50 hover:shadow-xl transition-all duration-300"
             >
               <h3 className="text-xl font-semibold text-white mb-6 bg-gradient-to-r from-blue-300 to-cyan-200 bg-clip-text text-transparent">
                 {skillCategory.category}
               </h3>
-              <div className="space-y-2 w-full">
+              <div className="space-y-2">
                 {skillCategory.items.map((skill, index) => (
                   <SkillBar
                     key={skill.name}

@@ -23,6 +23,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -51,9 +52,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -64,110 +67,123 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
 }
 
-.homeCards{
+.homeCards {
   position: relative;
   top: 220px;
   right: 25px;
 }
-.Ecard{
+
+.Ecard {
   position: relative;
   top: 230px;
   left: 15px;
 }
-.Ecard2{
+
+.Ecard2 {
   position: relative;
   top: 230px;
   left: 25px;
-  }
+}
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-.MainSec{
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);}
+.MainSec {
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
 
-  .scroll-watcher{
-    height:10px;
-    position:fixed;
-    z-index: 1000;
-    background-color: lime;
-    width: 100%;
-    scale: 0 1;
-    transform-origin: left;
-    animation: scroll-watcher linear;
-    animation-timeline: scroll();
-    
+.scroll-watcher {
+  height: 10px;
+  position: fixed;
+  z-index: 1000;
+  background-color: lime;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
   }
-
- @keyframes scroll-watcher{
-    to {scale: 1 1; }
- } 
+}
 
 
- div > .homeCards, .Ecard, .Ecard2{
+div>.homeCards,
+.Ecard,
+.Ecard2 {
   animation: fade-in linear;
   animation-timeline: view();
-  animation-range-start: cover;/* or contain */
+  animation-range-start: cover;
+  /* or contain */
   animation-range-end: 300px;
- }
- 
- @keyframes fade-in{
-  from{scale: .8; opacity: 0;}
-  to{scale: 1; opacity: 1;}
-<<<<<<< HEAD
-  }
-=======
-  }
-/* ////////// */
-  .card {
-    --white: hsl(0, 0%, 100%);
-    --black: hsl(240, 15%, 9%);
-    --paragraph: hsl(0, 0%, 83%);
-    --line: hsl(240, 9%, 17%);
-    --primary: hsl(189, 92%, 58%);
-  
-  
-    background-color: hsla(240, 15%, 9%, 1);
-    background-image: radial-gradient(
-        at 88% 40%,
-        hsla(240, 15%, 9%, 1) 0px,
-        transparent 85%
-      ),
-      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-      radial-gradient(at 0% 64%, hsl(189, 99%, 26%) 0px, transparent 85%),
-      radial-gradient(at 41% 94%, hsl(189, 97%, 36%) 0px, transparent 85%),
-      radial-gradient(at 100% 99%, hsl(188, 94%, 13%) 0px, transparent 85%);
-    
-      border-radius: 0 0 1rem 1rem;     box-shadow: 0px -16px 24px 0px rgba(62, 149, 231, 0.25) inset;
+}
+
+@keyframes fade-in {
+  from {
+    scale: .8;
+    opacity: 0;
   }
 
-  #edgeCard {
-    background-color: hsla(240, 15%, 9%, 1);
-    background-image: radial-gradient(
-        at 88% 40%,
-        hsla(240, 15%, 9%, 1) 0px,
-        transparent 85%
-      ),
-      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-      
-      radial-gradient(at 100% 99%, hsl(188, 94%, 13%) 0px, transparent 85%);
+  to {
+    scale: 1;
+    opacity: 1;
+  }
 }
-  
- /* .cssBG{
+
+/* ////////// */
+.card {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(240, 15%, 9%);
+  --paragraph: hsl(0, 0%, 83%);
+  --line: hsl(240, 9%, 17%);
+  --primary: hsl(189, 92%, 58%);
+
+
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(at 88% 40%,
+      hsla(240, 15%, 9%, 1) 0px,
+      transparent 85%),
+    radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, hsl(189, 99%, 26%) 0px, transparent 85%),
+    radial-gradient(at 41% 94%, hsl(189, 97%, 36%) 0px, transparent 85%),
+    radial-gradient(at 100% 99%, hsl(188, 94%, 13%) 0px, transparent 85%);
+
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0px -16px 24px 0px rgba(62, 149, 231, 0.25) inset;
+}
+
+#edgeCard {
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(at 88% 40%,
+      hsla(240, 15%, 9%, 1) 0px,
+      transparent 85%),
+    radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+
+    radial-gradient(at 100% 99%, hsl(188, 94%, 13%) 0px, transparent 85%);
+}
+
+/* .cssBG{
 
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); }
     */
->>>>>>> d219dde2391f5c47a1fedae9626dcc3128ea9442
