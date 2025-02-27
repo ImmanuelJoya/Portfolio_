@@ -1,7 +1,6 @@
 import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Certifications from './components/Certifications';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import SEO from './components/SEO';
@@ -23,7 +22,6 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>
-          <Certifications />
           <Footer />
         </div>
       </Router>

@@ -1,37 +1,32 @@
-<<<<<<< HEAD
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
 # My Portfolio 🌟  
 Showcasing My Work, Skills, and Journey  
 
-This portfolio is a personal project built with **React**, **Vite**, and **Tailwind CSS**. It highlights my projects, skills, and experience as I continue my journey toward becoming a Front-End Developer.  
+This portfolio is a personal project built with **React**, **Vite**, and **Tailwind CSS**, showcasing my journey toward becoming a Front-End Developer. It highlights my projects, skills, certifications, and provides a way to contact me—all wrapped in a modern, responsive design.
 
 ## Features  
-- Modern and responsive design.  
-- Smooth scrolling and interactive elements for an enhanced user experience.  
-- Showcases my projects, skills, and professional information.  
+- **Responsive Design**: Optimized for all devices with Tailwind CSS.  
+- **Interactive Elements**: Smooth scrolling, animations, and a dynamic contact form.  
+- **Project Showcase**: Highlights my work with live links and GitHub repos.  
+- **Skills & Certifications**: Displays my technical expertise and credentials.  
+- **Contact Form**: Sends messages directly to my email via a Go backend.
 
 ## Technologies Used  
-- **React**: For building a dynamic and efficient user interface.  
-- **Vite**: For faster builds and development.  
-- **Tailwind CSS**: For modern and flexible styling.  
+### Frontend  
+- **React**: Dynamic and efficient UI with Fast Refresh via Vite.  
+- **Vite**: Lightning-fast builds and hot module replacement (HMR).  
+- **Tailwind CSS**: Flexible, modern styling with a utility-first approach.  
 
-## Status  
-🚧 **Work in Progress**  
-I'm actively adding new features, optimizing the design, and expanding the content. Stay tuned for updates!  
+### Backend  
+- **Go (Golang)**: Lightweight, high-performance API for handling contact form submissions.  
+- **SMTP**: Integrates with Gmail to send emails to `immanueljoy107@gmail.com`.
 
-## Explore  
-Check out the live version of my portfolio here:  
-👉 [immanuelxxportfolio.netlify.app](https://immanuelxxportfolio.netlify.app)  
+## Live Links  
+- **Frontend**: [immanuelxxportfolio.netlify.app](https://immanuelxxportfolio.netlify.app)  
+- **Backend API**: [portfolio-pied-beta-91.vercel.app](https://portfolio-pied-beta-91.vercel.app)  
 
----
-
-Feel free to share your feedback or suggestions to help me improve! 🙌
->>>>>>> d219dde2391f5c47a1fedae9626dcc3128ea9442
+## Setup & Installation  
+### Frontend  
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/ImmanuelJoya/Portfolio.git
+   cd Portfolio

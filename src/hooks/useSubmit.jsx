@@ -1,25 +1,30 @@
-// src/hooks/useSubmit.jsx
 import { useState } from 'react';
 
-export const useSubmit = () => {
+const useSubmit = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const submit = async (data) => {
     setIsLoading(true);
     try {
-      
-      await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          Math.random() > 0.5 ? resolve({ type: 'success' }) : reject({ type: 'error', message: 'Submission failed' });
-        }, 1000);
+      const response = await fetch('https://portfolio-pied-beta-91.vercel.app/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString(),
       });
-      return { type: 'success' };
-    } catch (error) {
-      return { type: 'error', message: error.message };
-    } finally {
+      const result = await response.json();
       setIsLoading(false);
+      if (response.ok) {
+        return { type: 'success', message: result.message };
+      } else {
+        return { type: 'error', message: result.message || 'Submission failed' };
+      }
+    } catch (error) {
+      setIsLoading(false);
+      return { type: 'error', message: error.message };
     }
   };
 
   return { submit, isLoading };
 };
+
+export default useSubmit; // Default export

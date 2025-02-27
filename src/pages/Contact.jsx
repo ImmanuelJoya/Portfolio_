@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { useAlertContext } from '../hooks/AlertContext';
-import { useSubmit } from '../hooks/useSubmit';
+import useSubmit from '../hooks/useSubmit'; // Updated import
 
 const Contact = () => {
   const { onOpen } = useAlertContext();
@@ -31,7 +31,7 @@ const Contact = () => {
         onOpen(`Submission successful for ${values.firstName}`);
         resetForm();
         setShowPopup(true);
-        setTimeout(() => setShowPopup(false), 3000); // Auto-hide popup after 3s
+        setTimeout(() => setShowPopup(false), 3000);
       } else {
         onOpen(`Submission failed: ${response.message}`);
       }
@@ -40,9 +40,7 @@ const Contact = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex items-center justify-center py-20 relative overflow-hidden">
-      {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent opacity-30 pointer-events-none" />
-
       <motion.div
         className="max-w-lg w-full mx-auto p-6 bg-gray-800/40 backdrop-blur-md rounded-xl shadow-lg border border-gray-700/50 z-10"
         initial={{ opacity: 0, y: 20 }}
@@ -52,9 +50,7 @@ const Contact = () => {
         <h2 className="text-3xl font-semibold text-center mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
           Contact Me
         </h2>
-
         <form onSubmit={formik.handleSubmit} className="space-y-6">
-          {/* First Name */}
           <div>
             <label htmlFor="firstName" className="block text-sm font-medium text-gray-300">
               First Name
@@ -75,8 +71,6 @@ const Contact = () => {
               <p className="mt-1 text-sm text-red-500">{formik.errors.firstName}</p>
             )}
           </div>
-
-          {/* Email */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-300">
               Email
@@ -97,8 +91,6 @@ const Contact = () => {
               <p className="mt-1 text-sm text-red-500">{formik.errors.email}</p>
             )}
           </div>
-
-          {/* Enquiry Type */}
           <div>
             <label htmlFor="enquiryType" className="block text-sm font-medium text-gray-300">
               Type of Enquiry
@@ -122,8 +114,6 @@ const Contact = () => {
               <p className="mt-1 text-sm text-red-500">{formik.errors.enquiryType}</p>
             )}
           </div>
-
-          {/* Message */}
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-gray-300">
               Your Message
@@ -144,8 +134,6 @@ const Contact = () => {
               <p className="mt-1 text-sm text-red-500">{formik.errors.message}</p>
             )}
           </div>
-
-          {/* Submit Button */}
           <motion.button
             type="submit"
             className={`w-full py-3 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-md shadow-lg hover:shadow-xl hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all duration-300 ${
@@ -158,8 +146,6 @@ const Contact = () => {
             {isLoading ? 'Submitting...' : 'Submit'}
           </motion.button>
         </form>
-
-        {/* Success Popup */}
         {showPopup && (
           <motion.div
             className="fixed top-16 left-1/2 transform -translate-x-1/2 w-80 bg-gradient-to-r from-green-500 to-teal-500 text-white text-center p-4 rounded-md shadow-lg z-20"

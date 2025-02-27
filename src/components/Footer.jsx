@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { AiOutlineTwitter } from 'react-icons/ai';
-import { FaFacebook, FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 // Animation variants
 const footerVariants = {
@@ -24,10 +24,9 @@ const childVariants = {
 
 const Footer = () => {
   const socialLinks = [
-    { href: '#', icon: <FaFacebook />, label: 'Facebook' },
     { href: '#', icon: <FaInstagram />, label: 'Instagram' },
     { href: '#', icon: <AiOutlineTwitter />, label: 'Twitter' },
-    { href: '#', icon: <FaGithub />, label: 'GitHub' },
+    { href: 'https://github.com/ImmanuelJoya', icon: <FaGithub />, label: 'GitHub' },
     { href: '#', icon: <FaYoutube />, label: 'YouTube' },
   ];
 
