@@ -19,8 +19,8 @@ const projects = [
     description: "A responsive typing practice website built with React+Vite and modern web technologies.",
     image: "/tesla-clone.jpg",
     tags: ["React+Vite", "Tailwind", "CSS"],
-    github: "https://github.com/ImmanuelJoya/Tesla-with-JS",
-    live: "https://immanueljoya.github.io/Tesla-with-JS/",
+    github: "https://github.com/ImmanuelJoya/type_Practice?tab=readme-ov-file",
+    live: "https://typepractice.netlify.app/",
     category: "web",
   },
   {
@@ -29,8 +29,8 @@ const projects = [
     description: "A responsive movie website built with jQuery, AJAX, and modern web technologies.",
     image: "/tesla-clone.jpg",
     tags: ["jQuery", "HTML", "Bootstrap"],
-    github: "https://github.com/ImmanuelJoya/Tesla-with-JS",
-    live: "https://immanueljoya.github.io/Tesla-with-JS/",
+    github: "https://github.com/ImmanuelJoya/MovieINFO",
+    live: "movieiinfo.netlify.app",
     category: "web",
   },
   {
@@ -45,14 +45,35 @@ const projects = [
   },
   {
     id: 5,
-    title: "WWF",
+    title: "HyperTrophyGuide",
     description: "A responsive website built with HTML, Bootstrap, and CSS.",
     image: "/tesla-clone.jpg",
     tags: ["HTML", "Bootstrap", "CSS"],
-    github: "https://github.com/ImmanuelJoya/Tesla-with-JS",
+    github: "https://github.com/ImmanuelJoya/HyperTrophyGuide",
     live: "https://immanueljoya.github.io/Tesla-with-JS/",
-    category: "design",
+    category: "web",
   },
+  {
+    id: 6,
+    title: "TaskManager",
+    description: "A responsive website created with fastApi and python and tailwind, react and css for managing tasks.",
+    image: "/tesla-clone.jpg",
+    tags: ["React", "tailwind", "CSS", "FastAPI", "Python"],
+    github: "https://github.com/ImmanuelJoya/TaskManager",
+    live: "superb-brigadeiros-884056.netlify.app",
+    category: "web",
+  },
+  {
+    id: 7,
+    title: "WWF",
+    description: "A responsive website built with HTML, Bootstrap, and CSS.",
+    image: "/tesla-clone.jpg",
+    tags: ["React", "tailwind", "CSS", "FastAPI", "Python"],
+    github: "https://github.com/ImmanuelJoya/TaskManager",
+    live: "superb-brigadeiros-884056.netlify.app",
+    category: "design",
+  }, 
+
 ];
 
 const categories = ["all", "web", "design"];
@@ -92,11 +113,10 @@ const Projects = () => {
             <motion.button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full capitalize font-medium transition-all duration-300 ${
-                activeCategory === category
+              className={`px-6 py-2 rounded-full capitalize font-medium transition-all duration-300 ${activeCategory === category
                   ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/50"
                   : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/70 hover:text-cyan-300 backdrop-blur-sm"
-              }`}
+                }`}
               whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(0, 255, 255, 0.3)" }}
               whileTap={{ scale: 0.95 }}
             >
@@ -139,9 +159,8 @@ const Projects = () => {
                     }
                   />
                   <motion.div
-                    className={`absolute inset-0 bg-black/70 flex items-center justify-center transition-opacity duration-300 ${
-                      hoveredProject === project.id ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`absolute inset-0 bg-black/70 flex items-center justify-center transition-opacity duration-300 ${hoveredProject === project.id ? "opacity-100" : "opacity-0"
+                      }`}
                   >
                     <div className="flex gap-4">
                       <motion.a
