@@ -29,6 +29,9 @@ const skills = [
       { name: "Git", level: 90 },
       { name: "Docker", level: 60 },
       { name: "Figma", level: 85 },
+      { name: "Postman", level: 80 },
+      { name: "VS Code", level: 95 },
+      { name: "Linux", level: 60 },
     ],
   },
 ];
