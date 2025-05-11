@@ -10,6 +10,7 @@ import Tesla from '../assets/images/Tesla.png';
 import TP from '../assets/images/TP.png';
 import WWF from '../assets/images/WWF.png';
 
+
 const projects = [
 
   {
@@ -238,6 +239,27 @@ const Projects = () => {
           </AnimatePresence>
         </motion.div>
       </div>
+
+      <motion.div
+        className="mt-12 flex justify-center"
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.a
+          href="https://github.com/ImmanuelJoya"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.95 }}
+          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-full shadow-lg hover:shadow-[0_0_20px_#22d3ee] transition-all duration-300"
+        >
+          <FaGithub className="mr-2" size={18} />
+          View More on GitHub
+        </motion.a>
+      </motion.div>
+
 
       {/* Custom CSS for subtle pulse animation */}
       <style >{`
