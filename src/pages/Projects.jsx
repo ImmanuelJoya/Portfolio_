@@ -1,13 +1,32 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import ChatBottImg from '../assets/images/ChatBott.png';
+import HG from '../assets/images/HG.png';
+import MINFO from '../assets/images/MovieINFO.png';
+import RP from '../assets/images/RP.png';
+import TaskM from '../assets/images/TaskM.png';
+import Tesla from '../assets/images/Tesla.png';
+import TP from '../assets/images/TP.png';
+import WWF from '../assets/images/WWF.png';
 
 const projects = [
+
+  {
+    id: 9,
+    title: "ChatBott",
+    description: "A Chat bot Website with DeepSeek R1 API, Pinia and Express for backend and Vue and Tailwind for frontend.",
+    image: ChatBottImg,
+    tags: ["Vue", "tailwind", "CSS", "Express", "TypeScript", "Neon postgres", "Pinia"],
+    github: "https://github.com/ImmanuelJoya/ChatBottUi",
+    live: "https://chat-bott-ui-3o63.vercel.app",
+    category: "web",
+  },
   {
     id: 1,
     title: "Tesla Clone",
     description: "A responsive Tesla website clone built with JavaScript and modern web technologies.",
-    image: "/tesla-clone.jpg",
+    image: Tesla,
     tags: ["JavaScript", "HTML", "CSS"],
     github: "https://github.com/ImmanuelJoya/Tesla-with-JS",
     live: "https://immanueljoya.github.io/Tesla-with-JS/",
@@ -17,7 +36,7 @@ const projects = [
     id: 2,
     title: "Typing Practice",
     description: "A responsive typing practice website built with React+Vite and modern web technologies.",
-    image: "/tesla-clone.jpg",
+    image: TP,
     tags: ["React+Vite", "Tailwind", "CSS"],
     github: "https://github.com/ImmanuelJoya/type_Practice?tab=readme-ov-file",
     live: "https://typepractice.netlify.app/",
@@ -27,8 +46,8 @@ const projects = [
     id: 3,
     title: "Movie App",
     description: "A responsive movie website built with jQuery, AJAX, and modern web technologies.",
-    image: "/tesla-clone.jpg",
-    tags: ["jQuery", "HTML", "Bootstrap"],
+    image: MINFO,
+    tags: ["jQuery", "HTML", "Bootstrap", "AJAX", "Axios"],
     github: "https://github.com/ImmanuelJoya/MovieINFO",
     live: "movieiinfo.netlify.app",
     category: "web",
@@ -37,7 +56,7 @@ const projects = [
     id: 4,
     title: "Responsive Website",
     description: "A responsive website built with HTML and Bootstrap.",
-    image: "/tesla-clone.jpg",
+    image: RP,
     tags: ["HTML", "Bootstrap"],
     github: "https://github.com/ImmanuelJoya/Tesla-with-JS",
     live: "https://immanueljoya.github.io/Tesla-with-JS/",
@@ -47,7 +66,7 @@ const projects = [
     id: 5,
     title: "HyperTrophyGuide",
     description: "A responsive website built with HTML, Bootstrap, and CSS.",
-    image: "/tesla-clone.jpg",
+    image: HG,
     tags: ["HTML", "Bootstrap", "CSS"],
     github: "https://github.com/ImmanuelJoya/HyperTrophyGuide",
     live: "https://immanueljoya.github.io/Tesla-with-JS/",
@@ -57,7 +76,7 @@ const projects = [
     id: 6,
     title: "TaskManager",
     description: "A responsive website created with fastApi and python and tailwind, react and css for managing tasks.",
-    image: "/tesla-clone.jpg",
+    image: TaskM,
     tags: ["React", "tailwind", "CSS", "FastAPI", "Python"],
     github: "https://github.com/ImmanuelJoya/TaskManager",
     live: "superb-brigadeiros-884056.netlify.app",
@@ -67,12 +86,22 @@ const projects = [
     id: 7,
     title: "WWF",
     description: "A responsive website built with HTML, Bootstrap, and CSS.",
-    image: "/tesla-clone.jpg",
+    image: WWF,
     tags: ["React", "tailwind", "CSS", "FastAPI", "Python"],
     github: "https://github.com/ImmanuelJoya/TaskManager",
     live: "superb-brigadeiros-884056.netlify.app",
     category: "design",
-  }, 
+  },
+  {
+    id: 8,
+    title: "FetchMusic",
+    description: "A responsive website built with HTML, Bootstrap, and CSS.",
+    image: "/tesla-clone.jpg",
+    tags: ["React", "tailwind", "CSS", "FastAPI", "Python", "Axios"],
+    github: "https://github.com/ImmanuelJoya/FetchMusic",
+    live: "https://fetch-music.vercel.app",
+    category: "web",
+  },
 
 ];
 
@@ -114,8 +143,8 @@ const Projects = () => {
               key={category}
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-2 rounded-full capitalize font-medium transition-all duration-300 ${activeCategory === category
-                  ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/50"
-                  : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/70 hover:text-cyan-300 backdrop-blur-sm"
+                ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/50"
+                : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/70 hover:text-cyan-300 backdrop-blur-sm"
                 }`}
               whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(0, 255, 255, 0.3)" }}
               whileTap={{ scale: 0.95 }}
@@ -211,7 +240,7 @@ const Projects = () => {
       </div>
 
       {/* Custom CSS for subtle pulse animation */}
-      <style jsx global>{`
+      <style >{`
         @keyframes pulse-slow {
           0%, 100% { opacity: 0.3; }
           50% { opacity: 0.5; }
