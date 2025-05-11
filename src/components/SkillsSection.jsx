@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
 // Skills data remains unchanged
@@ -7,9 +6,9 @@ const skills = [
   {
     category: "Frontend",
     items: [
-      { name: "React", level: 80 },
+      { name: "React/Vue", level: 80 },
       { name: "JavaScript", level: 85 },
-      { name: "HTML/CSS", level: 95 },
+      { name: "HTML/CSS", level: 90 },
       { name: "Tailwind/Bootstrap", level: 88 },
       { name: "Jquery", level: 75 },
     ],
@@ -21,13 +20,14 @@ const skills = [
       { name: "Python", level: 70 },
       { name: "PHP", level: 75 },
       { name: "Go", level: 55 },
+      { name: "Sql/Postgres", level: 65 },
     ],
   },
   {
     category: "Tools & Others",
     items: [
       { name: "Git", level: 90 },
-      { name: "Docker", level: 75 },
+      { name: "Docker", level: 60 },
       { name: "Figma", level: 85 },
     ],
   },
