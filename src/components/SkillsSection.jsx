@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 import { useInView } from 'react-intersection-observer';
 
 // Skills data remains unchanged
@@ -42,6 +43,12 @@ const SkillBar = ({ name, level, delay }) => {
     threshold: 0.2,
     triggerOnce: true,
   });
+
+  SkillBar.propTypes = {
+    name: PropTypes.string.isRequired,
+    level: PropTypes.number.isRequired,
+    delay: PropTypes.number,
+  };
 
   return (
     <motion.div
