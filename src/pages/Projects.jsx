@@ -24,6 +24,16 @@ const projects = [
     category: "web",
   },
   {
+    id: 10,
+    title: "CosmicUpdate",
+    description: "A responsive website built with React and FastApi. Download YouTube Music with shared link.",
+    image: "/src/assets/images/CU.png",
+    tags: ["Vue", "CSS", "Axios", "TypeScript"],
+    github: "https://github.com/ImmanuelJoya/CosmicUpdates",
+    live: "https://cosmic-updates.vercel.app",
+    category: "web",
+  },
+  {
     id: 1,
     title: "Tesla Clone",
     description: "A responsive Tesla website clone built with JavaScript and modern web technologies.",
@@ -102,8 +112,7 @@ const projects = [
     github: "https://github.com/ImmanuelJoya/FetchMusic",
     live: "https://fetch-music.vercel.app",
     category: "web",
-  },
-
+  }
 ];
 
 const categories = ["all", "web", "design"];
