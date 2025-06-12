@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { TypeAnimation } from 'react-type-animation';
-// import reactIcon from '../assets/images/react-icon.svg'; // Example
 import { ReactSVG } from 'react-svg';
-import img1 from '../assets/images/img1.png'; // Example
+import { TypeAnimation } from 'react-type-animation';
+import img1 from '../assets/images/img1.png';
 import Certifications from '../components/Certifications';
 import ParticlesBackground from '../components/ParticlesBackground';
 import SkillsSection from '../components/SkillsSection';
+import WaveBackground from '../components/WaveBackground';
 
 // Animation variants
 const containerVariants = {
@@ -29,24 +29,22 @@ const Home = () => {
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
-
-        {/* Particle background */}
+        {/* Background effects */}
         <div className="absolute inset-0 z-0">
           <ParticlesBackground />
         </div>
+        <WaveBackground className="absolute inset-0 z-10" />
 
         {/* Glass overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 pointer-events-none z-20" />
 
         {/* Floating Tech Icons */}
         <motion.div
-          src={img1}
-
           className="w-12 h-12 absolute top-12 left-10 opacity-40"
           animate={{ y: [0, -15, 0] }}
           transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
         >
-          <ReactSVG src="/path/to/react-icon.svg" />
+          <ReactSVG src={img1} /> {/* Updated to use img1 as a fallback; adjust path if needed */}
         </motion.div>
         <motion.img
           src={img1}
@@ -55,13 +53,13 @@ const Home = () => {
           animate={{ y: [0, 15, 0] }}
           transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
         />
-        {/* <ReactSVG src="/path/to/react-icon.svg" /> */}
+
         {/* Scroll Indicator */}
-        <div className="absolute bottom-4 animate-bounce text-gray-400 text-2xl z-10">
+        <div className="absolute bottom-4 animate-bounce text-gray-400 text-2xl z-30">
           ↓
         </div>
 
-        <div className="max-w-7xl mx-auto z-10">
+        <div className="max-w-7xl mx-auto z-40">
           <motion.div
             className="flex flex-col items-center justify-center min-h-screen py-16"
             variants={containerVariants}
@@ -94,7 +92,6 @@ const Home = () => {
               />
             </motion.div>
 
-            {/* Glassmorphism Intro */}
             <motion.p
               className="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto text-center leading-relaxed bg-white/5 backdrop-blur-sm rounded-xl shadow-lg p-4"
               variants={childVariants}
