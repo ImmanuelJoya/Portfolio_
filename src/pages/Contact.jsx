@@ -1,6 +1,7 @@
 import { useFormik } from 'formik';
 import { motion } from 'framer-motion';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import ParticlesBackground from '../components/ParticlesBackground'; // Assuming you have a ParticlesBackground component
 import { useAlertContext } from '../hooks/AlertContext';
 import useSubmit from '../hooks/useSubmit'; // Updated import
 
@@ -40,6 +41,9 @@ const Contact = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex items-center justify-center py-20 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <ParticlesBackground />
+      </div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent opacity-30 pointer-events-none" />
       <motion.div
         className="max-w-lg w-full mx-auto p-6 bg-gray-800/40 backdrop-blur-md rounded-xl shadow-lg border border-gray-700/50 z-10"
@@ -60,9 +64,8 @@ const Contact = () => {
               name="firstName"
               type="text"
               placeholder="Your first name"
-              className={`mt-1 block w-full px-4 py-2 bg-gray-900/50 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 ${
-                formik.touched.firstName && formik.errors.firstName ? 'border-red-500' : 'border-gray-600'
-              } text-white`}
+              className={`mt-1 block w-full px-4 py-2 bg-gray-900/50 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 ${formik.touched.firstName && formik.errors.firstName ? 'border-red-500' : 'border-gray-600'
+                } text-white`}
               value={formik.values.firstName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -80,9 +83,8 @@ const Contact = () => {
               name="email"
               type="email"
               placeholder="Your email"
-              className={`mt-1 block w-full px-4 py-2 bg-gray-900/50 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 ${
-                formik.touched.email && formik.errors.email ? 'border-red-500' : 'border-gray-600'
-              } text-white`}
+              className={`mt-1 block w-full px-4 py-2 bg-gray-900/50 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 ${formik.touched.email && formik.errors.email ? 'border-red-500' : 'border-gray-600'
+                } text-white`}
               value={formik.values.email}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -98,9 +100,8 @@ const Contact = () => {
             <select
               id="enquiryType"
               name="enquiryType"
-              className={`mt-1 block w-full px-4 py-2 bg-gray-900/50 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 ${
-                formik.touched.enquiryType && formik.errors.enquiryType ? 'border-red-500' : 'border-gray-600'
-              } text-white`}
+              className={`mt-1 block w-full px-4 py-2 bg-gray-900/50 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 ${formik.touched.enquiryType && formik.errors.enquiryType ? 'border-red-500' : 'border-gray-600'
+                } text-white`}
               value={formik.values.enquiryType}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -123,9 +124,8 @@ const Contact = () => {
               name="message"
               rows="4"
               placeholder="Your message"
-              className={`mt-1 block w-full px-4 py-2 bg-gray-900/50 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 ${
-                formik.touched.message && formik.errors.message ? 'border-red-500' : 'border-gray-600'
-              } text-white`}
+              className={`mt-1 block w-full px-4 py-2 bg-gray-900/50 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 ${formik.touched.message && formik.errors.message ? 'border-red-500' : 'border-gray-600'
+                } text-white`}
               value={formik.values.message}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -136,9 +136,8 @@ const Contact = () => {
           </div>
           <motion.button
             type="submit"
-            className={`w-full py-3 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-md shadow-lg hover:shadow-xl hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all duration-300 ${
-              isLoading ? 'opacity-70 cursor-not-allowed' : ''
-            }`}
+            className={`w-full py-3 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-md shadow-lg hover:shadow-xl hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all duration-300 ${isLoading ? 'opacity-70 cursor-not-allowed' : ''
+              }`}
             disabled={isLoading}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

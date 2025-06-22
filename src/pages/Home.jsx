@@ -4,6 +4,7 @@ import { ReactSVG } from 'react-svg';
 import { TypeAnimation } from 'react-type-animation';
 import img1 from '../assets/images/img1.png';
 import Certifications from '../components/Certifications';
+import Education from '../components/Education';
 import ParticlesBackground from '../components/ParticlesBackground';
 import SkillsSection from '../components/SkillsSection';
 import WaveBackground from '../components/WaveBackground';
@@ -142,6 +143,7 @@ const Home = () => {
 
       <SkillsSection />
       <Certifications />
+      <Education />
     </>
   );
 };
