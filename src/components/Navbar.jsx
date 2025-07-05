@@ -54,7 +54,7 @@ const Navbar = () => {
 
 
     <motion.nav
-      className="bg-gradient-to-r from-gray-900/95 via-purple-950/95 to-black/95 text-white py-4 px-6 fixed w-full top-0 z-50 backdrop-blur-md"
+      className="bg-gradient-to-br from-gray-900 via-black-950 to-black text-white py-4 px-6 fixed w-full top-0 z-50 backdrop-blur-md"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

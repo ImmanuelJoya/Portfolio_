@@ -63,7 +63,7 @@ const pulseVariants = {
 const Home = () => {
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-950 to-black text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black-950 to-black text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Enhanced Background effects */}
         <div className="absolute inset-0 z-0">
           <ParticlesBackground />
@@ -204,10 +204,10 @@ const Home = () => {
                 filter: "drop-shadow(0 0 20px rgba(0,212,255,0.8))"
               }}
             >
-              <motion.span
+              <motion.span className='mt-4'
                 animate={{
                   textShadow: [
-                    "0 0 20px rgba(0,212,255,0.8)",
+                    "0 10px 20px rgba(0,212,255,0.8)",
                     "0 0 30px rgba(147,51,234,0.8)",
                     "0 0 20px rgba(0,212,255,0.8)"
                   ]
@@ -219,7 +219,7 @@ const Home = () => {
 
               {/* Animated underline */}
               <motion.div
-                className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+                className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-transparent via-cyan-700 to-transparent"
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ delay: 1, duration: 1.5, ease: "easeOut" }}

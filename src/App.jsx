@@ -14,7 +14,7 @@ function App() {
         <div className="min-h-screen bg-gray-900 text-white">
           <SEO />
           <Navbar />
-          <div className="pt-20"> {/* Add padding-top to account for fixed navbar */}
+          <div className=""> {/* Add padding-top to account for fixed navbar */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
