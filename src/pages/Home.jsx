@@ -86,7 +86,6 @@ const Home = () => {
 
         {/* Glass overlay with enhanced effects */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none z-30" />
-
         {/* Floating Tech Icons - Enhanced */}
         <motion.div
           className="w-16 h-16 absolute top-12 left-10 opacity-30"
