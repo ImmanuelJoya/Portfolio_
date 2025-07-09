@@ -206,9 +206,7 @@ const Home = () => {
               <motion.span className='mt-4'
                 animate={{
                   textShadow: [
-                    "0 10px 20px rgba(0,212,255,0.8)",
-                    "0 0 30px rgba(147,51,234,0.8)",
-                    "0 0 20px rgba(0,212,255,0.8)"
+
                   ]
                 }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -267,6 +265,7 @@ const Home = () => {
                 }}
                 transition={{ duration: 0.3 }}
               />
+
               <span className="relative z-10 block p-8">
                 I craft stunning, responsive, and user-centric web applications with cutting-edge technologies and a passion for seamless design that transforms ideas into extraordinary digital experiences.
               </span>
