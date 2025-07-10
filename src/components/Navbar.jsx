@@ -2,6 +2,7 @@ import { DocumentIcon, HomeIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Head from '../assets/images/Head.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,7 +98,7 @@ const Navbar = () => {
               className="relative"
             >
               <img
-                src="/src/assets/images/Head.png"
+                src={Head}
                 alt="Portfolio Head"
                 className="w-10 h-10 "
               />
