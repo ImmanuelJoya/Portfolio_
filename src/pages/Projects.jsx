@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import ChatBottImg from '../assets/images/ChatBott.png';
+import cosmicUpdate from '../assets/images/CU.png';
 import HG from '../assets/images/HG.png';
 import MINFO from '../assets/images/MovieINFO.png';
 import RP from '../assets/images/RP.png';
@@ -27,7 +28,7 @@ const projects = [
     id: 10,
     title: "CosmicUpdate",
     description: "A responsive website built with React and FastApi. Download YouTube Music with shared link.",
-    image: "/src/assets/images/CU.png",
+    image: { cosmicUpdate },
     tags: ["Vue", "CSS", "Axios", "TypeScript"],
     github: "https://github.com/ImmanuelJoya/CosmicUpdates",
     live: "https://cosmic-updates.vercel.app",
