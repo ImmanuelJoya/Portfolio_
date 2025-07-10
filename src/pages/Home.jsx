@@ -3,7 +3,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { ReactSVG } from 'react-svg';
 import { TypeAnimation } from 'react-type-animation';
 import img1 from '../assets/images/img1.png';
-import ppImage from '../assets/images/pp.png'; // Add your pp image import
+import ppImage from '../assets/images/PP.png';
 import Certifications from '../components/Certifications';
 import Education from '../components/Education';
 import ParticlesBackground from '../components/ParticlesBackground';
