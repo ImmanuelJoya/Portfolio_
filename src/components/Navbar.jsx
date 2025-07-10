@@ -50,9 +50,16 @@ const Navbar = () => {
     }
   };
 
+  const imageVariants = {
+    hover: {
+      scale: 1.1,
+      rotate: 5,
+      filter: "drop-shadow(0 0 15px rgba(0, 255, 255, 0.5))",
+      transition: { duration: 0.3 }
+    }
+  };
+
   return (
-
-
     <motion.nav
       className="bg-gradient-to-br from-gray-900 via-black-950 to-black text-white py-4 px-6 fixed w-full top-0 z-50 backdrop-blur-md"
       initial={{ y: -100, opacity: 0 }}
@@ -73,7 +80,7 @@ const Navbar = () => {
       />
 
       <div className="max-w-7xl mx-auto flex justify-between items-center relative z-10">
-        {/* Enhanced Logo */}
+        {/* Enhanced Logo with Image */}
         <motion.div
           variants={logoVariants}
           whileHover="hover"
@@ -81,28 +88,56 @@ const Navbar = () => {
         >
           <Link
             to="/"
-            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent relative"
+            className="flex items-center space-x-3 group"
           >
-            <motion.span
-              animate={{
-                textShadow: [
-                  "0 0 10px rgba(0,255,255,0.5)",
-                  "0 0 20px rgba(147,51,234,0.5)",
-                  "0 0 10px rgba(0,255,255,0.5)"
-                ]
-              }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            >
-              Portfolio
-            </motion.span>
-
-            {/* Animated underline */}
+            {/* Head Image */}
             <motion.div
-              className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400"
-              initial={{ width: 0 }}
-              whileHover={{ width: "100%" }}
-              transition={{ duration: 0.3 }}
-            />
+              variants={imageVariants}
+              whileHover="hover"
+              className="relative"
+            >
+              <img
+                src="/src/assets/images/Head.png"
+                alt="Portfolio Head"
+                className="w-10 h-10 "
+              />
+              {/* Animated ring around image */}
+              <motion.div
+                className="absolute inset-0 "
+                animate={{
+                  borderColor: [
+                    "rgba(6,182,212,0.8)",
+                    "rgba(147,51,234,0.8)",
+                    "rgba(6,182,212,0.8)"
+                  ]
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              />
+            </motion.div>
+
+            {/* Portfolio Text */}
+            <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent relative">
+              <motion.span
+                animate={{
+                  textShadow: [
+                    "0 0 10px rgba(0,255,255,0.5)",
+                    "0 0 20px rgba(147,51,234,0.5)",
+                    "0 0 10px rgba(0,255,255,0.5)"
+                  ]
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
+                Portfolio
+              </motion.span>
+
+              {/* Animated underline */}
+              <motion.div
+                className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400"
+                initial={{ width: 0 }}
+                whileHover={{ width: "100%" }}
+                transition={{ duration: 0.3 }}
+              />
+            </div>
           </Link>
         </motion.div>
 
