@@ -3,6 +3,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { ReactSVG } from 'react-svg';
 import { TypeAnimation } from 'react-type-animation';
 import img1 from '../assets/images/img1.png';
+import ppImage from '../assets/images/pp.png'; // Add your pp image import
 import Certifications from '../components/Certifications';
 import Education from '../components/Education';
 import ParticlesBackground from '../components/ParticlesBackground';
@@ -86,9 +87,10 @@ const Home = () => {
 
         {/* Glass overlay with enhanced effects */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none z-30" />
+
         {/* Floating Tech Icons - Enhanced */}
         <motion.div
-          className="w-16 h-16 absolute top-12 left-10 opacity-30"
+          className="w-12 h-12 sm:w-16 sm:h-16 absolute top-12 left-4 sm:left-10 opacity-30"
           variants={floatingVariants}
           animate="animate"
         >
@@ -103,7 +105,7 @@ const Home = () => {
         </motion.div>
 
         <motion.div
-          className="w-14 h-14 absolute top-1/4 right-16 opacity-30"
+          className="w-10 h-10 sm:w-14 sm:h-14 absolute top-1/4 right-8 sm:right-16 opacity-30"
           animate={{
             y: [0, -25, 0],
             x: [0, 10, 0],
@@ -120,7 +122,7 @@ const Home = () => {
         </motion.div>
 
         <motion.div
-          className="w-12 h-12 absolute bottom-20 left-16 opacity-25"
+          className="w-8 h-8 sm:w-12 sm:h-12 absolute bottom-20 left-8 sm:left-16 opacity-25"
           animate={{
             y: [0, 15, 0],
             rotate: [0, -180, -360],
@@ -138,7 +140,7 @@ const Home = () => {
         <motion.img
           src={img1}
           alt="Tailwind"
-          className="w-12 h-12 absolute bottom-12 right-10 opacity-40"
+          className="w-8 h-8 sm:w-12 sm:h-12 absolute bottom-12 right-6 sm:right-10 opacity-40"
           animate={{
             y: [0, 15, 0],
             rotate: [0, -90, 0],
@@ -149,7 +151,7 @@ const Home = () => {
 
         {/* Additional floating elements */}
         <motion.div
-          className="w-8 h-8 absolute top-1/3 left-1/4 opacity-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
+          className="w-6 h-6 sm:w-8 sm:h-8 absolute top-1/3 left-1/4 opacity-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
           animate={{
             y: [0, -30, 0],
             scale: [1, 1.5, 1],
@@ -159,7 +161,7 @@ const Home = () => {
         />
 
         <motion.div
-          className="w-6 h-6 absolute bottom-1/3 right-1/4 opacity-20 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full"
+          className="w-4 h-4 sm:w-6 sm:h-6 absolute bottom-1/3 right-1/4 opacity-20 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full"
           animate={{
             y: [0, 20, 0],
             scale: [1, 0.8, 1],
@@ -168,218 +170,217 @@ const Home = () => {
           transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
         />
 
-        {/* Enhanced Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-8 text-gray-300 text-3xl z-40 cursor-pointer"
-          animate={{
-            y: [0, 10, 0],
-            opacity: [0.5, 1, 0.5]
-          }}
-          transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-          whileHover={{ scale: 1.2, color: "#00d4ff" }}
-        >
-          <motion.div
-            className="flex flex-col items-center"
-            whileHover={{ y: -5 }}
-          >
-            <span className="text-sm font-light mb-1 tracking-wider">SCROLL</span>
-            ↓
-          </motion.div>
-        </motion.div>
 
-        <div className="max-w-7xl mx-auto z-40">
+
+
+        <div className="max-w-7xl mx-auto z-40 w-full">
           <motion.div
-            className="flex flex-col items-center justify-center min-h-screen py-16"
+            className="flex items-center justify-center min-h-screen py-16"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
-            {/* Enhanced Name with multiple effects */}
-            <motion.h1
-              className="text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400 bg-clip-text text-transparent relative"
-              variants={childVariants}
-              transition={{ duration: 1.2 }}
-              style={{
-                filter: "drop-shadow(0 0 20px rgba(0,212,255,0.8))"
-              }}
-            >
-              <motion.span className='mt-4'
-                animate={{
-                  textShadow: [
+            {/* Main Content Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full">
 
-                  ]
-                }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              >
-                Hi, I&apos;m Immanuel
-              </motion.span>
-
-              {/* Animated underline */}
-              <motion.div
-                className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-transparent via-cyan-700 to-transparent"
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ delay: 1, duration: 1.5, ease: "easeOut" }}
-              />
-            </motion.h1>
-
-            {/* Enhanced TypeAnimation with backdrop */}
-            <motion.div
-              className="text-2xl md:text-4xl text-gray-200 mb-10 relative"
-              variants={childVariants}
-              transition={{ duration: 1 }}
-            >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"
-                animate={{
-                  scale: [1, 1.05, 1],
-                  opacity: [0.3, 0.6, 0.3]
-                }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <TypeAnimation
-                sequence={[
-                  'Full Stack Developer', 2500,
-                  'UI/UX Enthusiast', 2500,
-                  'Problem Solver', 2500,
-                  'Creative Innovator', 2500,
-                ]}
-                wrapper="span"
-                speed={45}
-                repeat={Infinity}
-                className="inline-block px-6 py-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 relative z-10 font-medium tracking-wide"
-              />
-            </motion.div>
-
-            {/* Enhanced description with glassmorphism */}
-            <motion.p
-              className="text-lg md:text-xl text-gray-200 mb-16 max-w-4xl mx-auto text-center leading-relaxed relative"
-              variants={childVariants}
-              transition={{ duration: 1 }}
-            >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 backdrop-blur-md rounded-3xl border border-white/10"
-                whileHover={{
-                  backgroundColor: "rgba(255,255,255,0.15)",
-                  borderColor: "rgba(255,255,255,0.3)"
-                }}
-                transition={{ duration: 0.3 }}
-              />
-
-              <span className="relative z-10 block p-8">
-                I craft stunning, responsive, and user-centric web applications with cutting-edge technologies and a passion for seamless design that transforms ideas into extraordinary digital experiences.
-              </span>
-            </motion.p>
-
-            {/* Enhanced Social Links */}
-            <motion.div
-              className="flex justify-center space-x-10"
-              variants={childVariants}
-              transition={{ duration: 1 }}
-            >
-              {[
-                {
-                  href: 'https://github.com/ImmanuelJoya',
-                  icon: <FaGithub />,
-                  label: 'GitHub',
-                  color: 'from-gray-400 to-gray-600',
-                  hoverColor: 'rgba(100,100,100,0.8)'
-                },
-                {
-                  href: 'https://www.linkedin.com/in/immanuel-joy-178b66294/',
-                  icon: <FaLinkedin />,
-                  label: 'LinkedIn',
-                  color: 'from-blue-400 to-blue-600',
-                  hoverColor: 'rgba(0,119,181,0.8)'
-                },
-                {
-                  href: 'mailto:immanueljoy107@gmail.com',
-                  icon: <FaEnvelope />,
-                  label: 'Email',
-                  color: 'from-red-400 to-red-600',
-                  hoverColor: 'rgba(234,67,53,0.8)'
-                },
-              ].map((link, index) => (
-                <motion.div
-                  key={link.label}
-                  className="relative group"
-                  whileHover={{ y: -5 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.8 + index * 0.2, duration: 0.6 }}
+              {/* Left Column - Text Content */}
+              <div className="flex flex-col items-start text-left space-y-6 sm:space-y-8">
+                {/* Enhanced Name moved to left */}
+                <motion.h1
+                  className="top-16 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400 bg-clip-text text-transparent relative"
+                  variants={childVariants}
+                  transition={{ duration: 1.2 }}
+                  style={{
+                    filter: "drop-shadow(0 0 20px rgba(0,212,255,0.8))"
+                  }}
                 >
-                  {/* Glow effect */}
+                  <motion.span
+                    animate={{
+                      textShadow: []
+                    }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    Hi, I'm Immanuel
+                  </motion.span>
+
+                  {/* Animated underline */}
                   <motion.div
-                    className={`absolute inset-0 bg-gradient-to-r ${link.color} rounded-full blur-xl opacity-0 group-hover:opacity-60`}
-                    whileHover={{ scale: 1.5 }}
+                    className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-transparent via-cyan-700 to-transparent"
+                    initial={{ width: 0 }}
+                    animate={{ width: "100%" }}
+                    transition={{ delay: 1, duration: 1.5, ease: "easeOut" }}
+                  />
+                </motion.h1>
+
+                {/* Enhanced TypeAnimation */}
+                <motion.div
+                  className="top-16 text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 relative w-full"
+                  variants={childVariants}
+                  transition={{ duration: 1 }}
+                >
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"
+                    animate={{
+                      scale: [1, 1.05, 1],
+                      opacity: [0.3, 0.6, 0.3]
+                    }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  <TypeAnimation
+                    sequence={[
+                      'Full Stack Developer', 2500,
+                      'UI/UX Enthusiast', 2500,
+                      'Problem Solver', 2500,
+                      'Creative Innovator', 2500,
+                    ]}
+                    wrapper="span"
+                    speed={45}
+                    repeat={Infinity}
+                    className="inline-block px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 relative z-10 font-medium tracking-wide text-center sm:text-left"
+                  />
+                </motion.div>
+
+                {/* Enhanced description */}
+                <motion.p
+                  className="top-14 text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed relative max-w-2xl"
+                  variants={childVariants}
+                  transition={{ duration: 1 }}
+                >
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 backdrop-blur-md rounded-3xl border border-white/10"
+                    whileHover={{
+                      backgroundColor: "rgba(255,255,255,0.15)",
+                      borderColor: "rgba(255,255,255,0.3)"
+                    }}
                     transition={{ duration: 0.3 }}
                   />
 
-                  <motion.a
-                    href={link.href}
-                    target={link.href.includes('mailto') ? '_self' : '_blank'}
-                    rel={link.href.includes('mailto') ? '' : 'noopener noreferrer'}
-                    className="relative z-10 flex items-center justify-center w-16 h-16 text-2xl text-gray-300 bg-white/10 backdrop-blur-md rounded-full border border-white/20 transition-all duration-300"
-                    whileHover={{
-                      scale: 1.15,
-                      rotate: 5,
-                      boxShadow: `0 0 30px ${link.hoverColor}`,
-                      borderColor: "rgba(255,255,255,0.4)"
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    aria-label={link.label}
-                  >
-                    {link.icon}
-                  </motion.a>
+                  <span className="relative z-10 block p-4 sm:p-6">
+                    I craft stunning, responsive, and user-centric web applications with cutting-edge technologies and a passion for seamless design that transforms ideas into extraordinary digital experiences.
+                  </span>
+                </motion.p>
 
-                  {/* Label */}
-                  <motion.span
-                    className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
+                {/* Social Links moved to bottom center - keeping this for desktop layout */}
+                <div className='relative left-80'>
+                  <motion.div
+                    className="hidden relative left-full top-20 w-50px lg:flex space-x-6"
+                    variants={childVariants}
+                    transition={{ duration: 1 }}
                   >
-                    {link.label}
-                  </motion.span>
-                </motion.div>
-              ))}
-            </motion.div>
+                    {[
+                      {
+                        href: 'https://github.com/ImmanuelJoya',
+                        icon: <FaGithub />,
+                        label: 'GitHub',
+                        color: 'from-gray-400 to-gray-600',
+                        hoverColor: 'rgba(100,100,100,0.8)'
+                      },
+                      {
+                        href: 'https://www.linkedin.com/in/immanuel-joy-178b66294/',
+                        icon: <FaLinkedin />,
+                        label: 'LinkedIn',
+                        color: 'from-blue-400 to-blue-600',
+                        hoverColor: 'rgba(0,119,181,0.8)'
+                      },
+                      {
+                        href: 'mailto:immanueljoy107@gmail.com',
+                        icon: <FaEnvelope />,
+                        label: 'Email',
+                        color: 'from-red-400 to-red-600',
+                        hoverColor: 'rgba(234,67,53,0.8)'
+                      },
+                    ].map((link, index) => (
+                      <motion.div
+                        key={link.label}
+                        className="relative group"
+                        whileHover={{ y: -5 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.8 + index * 0.2, duration: 0.6 }}
+                      >
+                        {/* Glow effect */}
+                        <motion.div
+                          className={`absolute inset-0 bg-gradient-to-r ${link.color} rounded-full blur-xl opacity-0 group-hover:opacity-60`}
+                          whileHover={{ scale: 1.5 }}
+                          transition={{ duration: 0.3 }}
+                        />
 
-            {/* Call to action button */}
-            {/* <motion.div
-              className="mt-12"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2.5, duration: 0.8 }}
-            >
-              <motion.button
-                className="relative px-8 py-4 text-white font-semibold rounded-full overflow-hidden group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                        <motion.a
+                          href={link.href}
+                          target={link.href.includes('mailto') ? '_self' : '_blank'}
+                          rel={link.href.includes('mailto') ? '' : 'noopener noreferrer'}
+                          className="relative z-10 flex items-center justify-center w-14 h-14 text-xl text-gray-300 bg-white/10 backdrop-blur-md rounded-full border border-white/20 transition-all duration-300"
+                          whileHover={{
+                            scale: 1.15,
+                            rotate: 5,
+                            boxShadow: `0 0 30px ${link.hoverColor}`,
+                            borderColor: "rgba(255,255,255,0.4)"
+                          }}
+                          whileTap={{ scale: 0.95 }}
+                          aria-label={link.label}
+                        >
+                          {link.icon}
+                        </motion.a>
+
+                        {/* Label */}
+                        <motion.span
+                          className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
+                        >
+                          {link.label}
+                        </motion.span>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* Right Column - Image */}
+              <motion.div
+                className="flex justify-center lg:justify-end"
+                variants={childVariants}
+                transition={{ duration: 1 }}
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500"
-                  animate={{
-                    x: ["-100%", "100%"],
-                  }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 3,
-                    ease: "linear"
-                  }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-80" />
-                <span className="relative z-10 flex items-center space-x-2">
-                  <span>Let&apos;s Create Something Amazing</span>
-                  <motion.span
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ repeat: Infinity, duration: 1.5 }}
-                  >
-                    →
-                  </motion.span>
-                </span>
-              </motion.button>
-            </motion.div> */}
+                  className="relative"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                >
+                  {/* Futuristic glow effect around image */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl blur-2xl"
+                    animate={{
+                      scale: [1, 1.05, 1],
+                      opacity: [0.4, 0.8, 0.4]
+                    }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  />
+
+                  {/* Image container with glassmorphism */}
+                  <div className="relative">
+                    <motion.img
+                      src={ppImage}
+                      alt="Profile"
+                      className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-2xl"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.5, duration: 1 }}
+                    />
+
+                    {/* Subtle overlay gradient */}
+                    <motion.div
+                      className="absolute inset-4 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl pointer-events-none"
+                      animate={{
+                        opacity: [0.3, 0.1, 0.3]
+                      }}
+                      transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                    />
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
-      </section>
+      </section >
 
       <SkillsSection />
       <Certifications />
