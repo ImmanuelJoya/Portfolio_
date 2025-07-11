@@ -191,7 +191,7 @@ const Home = () => {
                   variants={childVariants}
                   transition={{ duration: 1.2 }}
                   style={{
-                    filter: "drop-shadow(0 0 20px rgba(0,212,255,0.8))"
+                    filter: ""
                   }}
                 >
                   <motion.span
