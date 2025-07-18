@@ -6,6 +6,7 @@ import img1 from '../assets/images/img1.png';
 import ppImage from '../assets/images/PP.png';
 import Certifications from '../components/Certifications';
 import Education from '../components/Education';
+import Experience from '../components/Experience';
 import ParticlesBackground from '../components/ParticlesBackground';
 import SkillsSection from '../components/SkillsSection';
 import WaveBackground from '../components/WaveBackground';
@@ -385,6 +386,7 @@ const Home = () => {
       <SkillsSection />
       <Certifications />
       <Education />
+      <Experience />
     </>
   );
 };
