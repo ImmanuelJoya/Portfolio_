@@ -4,9 +4,9 @@ import { Award, Briefcase, Calendar, Code, Database, GraduationCap, MapPin, User
 const experienceData = [
     {
         id: 1,
-        category: 'Software Development',
+        category: 'Web Development',
         company: 'GL InfoTech',
-        role: 'Software Developer Intern',
+        role: 'Web Developer Intern',
         fromYear: '2022',
         toYear: '2023',
         workType: 'Part Time',
@@ -329,7 +329,7 @@ const Experience = () => {
                 >
                     <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-gray-800/30 to-gray-900/30 backdrop-blur-xl rounded-full border border-gray-700/30">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-                        <span className="text-gray-400 text-sm">Building tomorrow's technology today</span>
+                        <span className="text-gray-400 text-sm">Building tomorrow&apos;s technology today</span>
                         <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
                     </div>
                 </motion.div>
