@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, Calendar, GraduationCap, MapPin } from 'lucide-react';
+import { Award, Calendar, MapPin } from 'lucide-react';
 
 const educationData = [
     {
@@ -18,217 +18,95 @@ const educationData = [
     }
 ];
 
-// Animation variants
-const sectionVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 1, ease: 'easeOut', staggerChildren: 0.3 },
-    },
+// Simplified animation variants
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.05 } }
 };
 
-const cardVariants = {
-    hidden: { opacity: 0, scale: 0.8, rotateY: -15 },
-    visible: {
-        opacity: 1,
-        scale: 1,
-        rotateY: 0,
-        transition: { duration: 0.8, ease: 'easeOut' }
-    },
-};
-
-const iconVariants = {
-    hidden: { scale: 0, rotate: -180 },
-    visible: {
-        scale: 1,
-        rotate: 0,
-        transition: { delay: 0.5, duration: 0.6, ease: 'easeOut' }
-    },
+const itemVariants = {
+    hidden: { y: 40, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.3, ease: "easeOut" } }
 };
 
 const Education = () => {
     return (
-        <section className="relative min-h-screen bg-gradient-to-br from-gray-950 via-slate-900 to-black text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-            {/* Animated background elements */}
-            <div className="absolute inset-0 overflow-hidden">
-                {/* Floating orbs */}
-                <motion.div
-                    className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-xl"
-                    animate={{
-                        y: [0, -20, 0],
-                        scale: [1, 1.1, 1],
-                    }}
-                    transition={{
-                        duration: 6,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                    }}
-                />
-                <motion.div
-                    className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-xl"
-                    animate={{
-                        y: [0, 15, 0],
-                        scale: [1, 0.9, 1],
-                    }}
-                    transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: 2
-                    }}
-                />
-
-                {/* Grid pattern */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
-
-                {/* Radial gradient overlay */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.15),transparent_50%)]" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.1),transparent_50%)]" />
-            </div>
-
-            <motion.div
-                className="max-w-6xl mx-auto relative z-10"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={sectionVariants}
-            >
+        <section className="relative min-h-screen bg-gray-950 text-gray-100 py-20 px-4 sm:px-6 lg:px-8 font-mono">
+            {/* Subtle grid background pattern */}
+            <div className="absolute inset-0" style={{
+                backgroundImage: `repeating-linear-gradient(0deg, #111827 0px, transparent 1px, transparent 40px, #111827 41px),
+                                 repeating-linear-gradient(90deg, #111827 0px, transparent 1px, transparent 40px, #111827 41px)`,
+                opacity: 0.2
+            }} />
+            
+            <div className="max-w-7xl mx-auto relative">
                 {/* Header */}
-                <motion.div className="text-center mb-16">
-                    <motion.div
-                        className="inline-block mb-6"
-                        initial={{ scale: 0, rotate: -180 }}
-                        whileInView={{ scale: 1, rotate: 0 }}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
-                        viewport={{ once: true }}
-                    >
-                        <GraduationCap className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
-                    </motion.div>
-
-                    <motion.h2
-                        className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        viewport={{ once: true }}
-                    >
-                        Education
-                    </motion.h2>
-
-                    <motion.div
-                        className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: 96 }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                        viewport={{ once: true }}
-                    />
+                <motion.div 
+                    className="mb-16"
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4 }}
+                >
+                    <h2 className="text-2xl font-bold mb-2 tracking-tight text-white">EDUCATION</h2>
+                    <p className="text-sm text-gray-500 max-w-md">Academic background and qualifications</p>
                 </motion.div>
 
-                {/* Education Cards */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                {/* Brutalist Grid - Dark Theme */}
+                <motion.div 
+                    className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-gray-700"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                >
                     {educationData.map((edu) => (
                         <motion.div
                             key={edu.id}
-                            className="group relative"
-                            variants={cardVariants}
-                            whileHover={{
-                                scale: 1.02,
-                                transition: { duration: 0.3 }
-                            }}
+                            variants={itemVariants}
+                            className="relative bg-gray-900 p-6 hover:bg-gray-800 transition-colors duration-200 cursor-pointer flex flex-col h-full"
                         >
-                            {/* Card glow effect */}
-                            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-all duration-500" />
-
-                            {/* Main card */}
-                            <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl p-8 rounded-2xl border border-gray-700/50 group-hover:border-cyan-500/50 transition-all duration-500 overflow-hidden">
-                                {/* Background pattern */}
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-cyan-500/10 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                                {/* Degree icon */}
-                                <motion.div
-                                    className="flex items-center mb-6"
-                                    variants={iconVariants}
-                                >
-                                    <div className="p-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl mr-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
-                                        <Award className="w-6 h-6 text-cyan-400" />
+                            {/* Status indicator */}
+                            <div className="absolute top-3 left-3 w-2 h-2 bg-cyan-400 rounded-full" />
+                            
+                            {/* Content */}
+                            <div className="pt-2 flex-1 flex flex-col">
+                                {/* Degree with simple icon */}
+                                <div className="flex items-start mb-4">
+                                    <Award className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
+                                    <div>
+                                        <h3 className="text-base font-bold text-white leading-snug mb-1">{edu.degree}</h3>
+                                        <div className="w-10 h-0.5 bg-cyan-400 rounded-full" />
                                     </div>
-                                    <div className="flex-1">
-                                        <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-cyan-300 transition-colors duration-300">
-                                            {edu.degree}
-                                        </h3>
-                                        <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" />
-                                    </div>
-                                </motion.div>
-
+                                </div>
+                                
                                 {/* University */}
-                                <motion.div
-                                    className="flex items-center mb-4"
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.3, duration: 0.6 }}
-                                    viewport={{ once: true }}
-                                >
-                                    <MapPin className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                                    <p className="text-gray-300 text-lg font-medium">
-                                        {edu.university}
-                                    </p>
-                                </motion.div>
+                                <div className="flex items-start mb-3">
+                                    <MapPin className="w-4 h-4 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
+                                    <p className="text-sm text-gray-400 uppercase tracking-wide">{edu.university}</p>
+                                </div>
 
                                 {/* Year */}
-                                <motion.div
-                                    className="flex items-center mb-4"
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.4, duration: 0.6 }}
-                                    viewport={{ once: true }}
-                                >
-                                    <Calendar className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                                    <p className="text-gray-300 text-lg">
-                                        Graduated in <span className="text-cyan-400 font-semibold">{edu.year}</span>
-                                    </p>
-                                </motion.div>
+                                <div className="flex items-start mb-3">
+                                    <Calendar className="w-4 h-4 text-gray-500 mr-2 mt-0.5 flex-shrink-0" />
+                                    <p className="text-sm text-gray-400">Graduated <span className="font-mono text-cyan-400">{edu.year}</span></p>
+                                </div>
 
                                 {/* Major */}
-                                <motion.div
-                                    className="mt-6"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.5, duration: 0.6 }}
-                                    viewport={{ once: true }}
-                                >
-                                    <div className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-full">
-                                        <p className="text-cyan-300 font-medium">
-                                            Major: {edu.major}
-                                        </p>
-                                    </div>
-                                </motion.div>
-
-                                {/* Decorative elements */}
-                                <div className="absolute top-4 right-4 w-2 h-2 bg-cyan-400 rounded-full opacity-60" />
-                                <div className="absolute top-8 right-6 w-1 h-1 bg-blue-400 rounded-full opacity-40" />
+                                <div className="mt-auto pt-4 border-t border-gray-800">
+                                    <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Major</p>
+                                    <p className="text-sm text-white font-medium">{edu.major}</p>
+                                </div>
                             </div>
+
+                            {/* Hover outline */}
+                            <div className="absolute inset-0 border-2 border-cyan-400 opacity-0 hover:opacity-100 transition-opacity duration-200 pointer-events-none" />
                         </motion.div>
                     ))}
-                </div>
-
-                {/* Bottom decorative element */}
-                <motion.div
-                    className="mt-16 text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8, duration: 0.8 }}
-                    viewport={{ once: true }}
-                >
-                    <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-gray-800/30 to-gray-900/30 backdrop-blur-xl rounded-full border border-gray-700/30">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-                        <span className="text-gray-400 text-sm">Continuing the journey of learning</span>
-                        <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
-                    </div>
                 </motion.div>
-            </motion.div>
+            </div>
         </section>
     );
 };
 
-export default Education;
+export default Education;   
