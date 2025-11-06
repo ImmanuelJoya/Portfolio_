@@ -262,7 +262,7 @@ const Home = () => {
                 </motion.p>
 
                 {/* Social Links moved to bottom center - keeping this for desktop layout */}
-                <div className='relative left-80'>
+                <div className='relative left-80 top-5 fixed'>
                   <motion.div
                     className="hidden relative left-full top-20 w-50px lg:flex space-x-6"
                     variants={childVariants}
