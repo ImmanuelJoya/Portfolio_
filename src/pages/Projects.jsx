@@ -163,7 +163,7 @@ const Projects = () => {
       {/* Subtle background pattern */}
       <div className="absolute inset-0" style={{
         backgroundImage: `repeating-linear-gradient(0deg, #111827 0px, transparent 1px, transparent 40px, #111827 41px),
-                         repeating-linear-gradient(90deg, #111827 0px, transparent 1px, transparent 40px, #111827 41px)`,
+                        Frepeating-linear-gradient(90deg, #111827 0px, transparent 1px, transparent 40px, #111827 41px)`,
         opacity: 0.15
       }} />
       
