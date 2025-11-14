@@ -13,6 +13,7 @@ import Tesla from '../assets/images/Tesla.png';
 import TP from '../assets/images/TP.png';
 import WWF from '../assets/images/WWF.png';
 import doom from '../assets/images/doom.png';
+import c4 from '../assets/images/c4.png';
 
 // Cleaned and consistent project data
 const projects = [
@@ -21,21 +22,33 @@ const projects = [
     title: "ChatBott",
     description: "AI-powered chatbot using DeepSeek R1 API, with Express backend and Vue frontend. Features secure authentication and real-time responses.",
     image: ChatBottImg,
-    tags: ["Vue", "Express", "DeepSeek", "Axios", "Tailwind","Vite", "Neon-Postgress"],
+    tags: ["Vue", "Express", "DeepSeek", "Axios", "Tailwind", "Vite", "Neon-Postgress"],
     github: "https://github.com/ImmanuelJoya/ChatBottUi",
     live: "https://chatbott-ypqs.onrender.com",
     category: "web",
   },
-  { id: 2,
+  {
+    id: 2,
+    title: "Connect4",
+    description: "Connect 4 game built with React and Tailwind CSS. Features two-player mode, responsive design, and smooth animations.",
+    image: c4,
+    tags: ["React", "Typescript ", "Tailwind", "Vite"],
+    github: "https://github.com/ImmanuelJoya/Connect4",
+    live: "https://connect-4-cz3b.onrender.com",
+    category: "web",
+  },
+  {
+    id: 3,
     title: "Doom",
     description: "This project runs Freedoom (a free, open-source Doom-compatible game) in your browser using Chocolate Doom compiled to WebAssembly.",
     image: doom,
-    tags: ["Docker","Freedoom WAD ", "Chocolate Doom"],
+    tags: ["Docker", "Freedoom WAD ", "Chocolate Doom"],
     github: "https://github.com/ImmanuelJoya/BackToRetro",
     live: "https://backtoretro.onrender.com",
-    category: "web",},
+    category: "web",
+  },
   {
-    id: 3,
+    id: 4,
     title: "CosmicUpdate",
     description: "YouTube Music downloader with React frontend and FastAPI backend. Built with modern async patterns and responsive design.",
     image: cosmicUpdate,
@@ -45,7 +58,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 4,
+    id: 5,
     title: "Tesla Clone",
     description: "A responsive Tesla website clone built with JavaScript and modern web technologies.",
     image: Tesla,
@@ -55,7 +68,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 5,
+    id: 6,
     title: "Typing Practice",
     description: "A responsive typing practice website built with React+Vite and modern web technologies.",
     image: TP,
@@ -65,7 +78,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 6,
+    id: 7,
     title: "Movie App",
     description: "A responsive movie website built with jQuery, AJAX, and modern web technologies.",
     image: MINFO,
@@ -75,7 +88,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 7,
+    id: 8,
     title: "Responsive Website",
     description: "A responsive website built with HTML and Bootstrap.",
     image: RP,
@@ -85,7 +98,7 @@ const projects = [
     category: "design",
   },
   {
-    id: 8,
+    id: 9,
     title: "HyperTrophyGuide",
     description: "A responsive website built with HTML, Bootstrap, and CSS.",
     image: HG,
@@ -95,7 +108,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 9,
+    id: 10,
     title: "TaskManager",
     description: "A responsive website created with FastAPI and Python for managing tasks.",
     image: TaskM,
@@ -105,7 +118,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 10,
+    id: 11,
     title: "WWF",
     description: "A responsive website built with HTML, Bootstrap, and CSS.",
     image: WWF,
@@ -115,7 +128,7 @@ const projects = [
     category: "design",
   },
   {
-    id: 11,
+    id: 12,
     title: "FetchMusic",
     description: "Download YouTube Music with shared link. React + FastAPI stack with responsive Tailwind styling.",
     image: "/tesla-clone.jpg", // Fallback example
@@ -125,7 +138,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 12,
+    id: 13,
     title: "JobMarket",
     description: "A simple full-stack web app built with React + Vite (TypeScript), Tailwind CSS, and an Express.js backend that fetches and displays the latest remote jobs using the Jobicy API.",
     image: "/tesla-clone.jpg", // Fallback example
@@ -144,7 +157,7 @@ const Projects = () => {
   const [imageErrors, setImageErrors] = useState(new Set());
 
   // Memoized filtering for performance
-  const filteredProjects = useMemo(() => 
+  const filteredProjects = useMemo(() =>
     projects.filter(p => activeCategory === "all" ? true : p.category === activeCategory),
     [activeCategory]
   );
@@ -166,10 +179,10 @@ const Projects = () => {
                         Frepeating-linear-gradient(90deg, #111827 0px, transparent 1px, transparent 40px, #111827 41px)`,
         opacity: 0.15
       }} />
-      
+
       <div className="max-w-7xl mx-auto relative">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -191,11 +204,10 @@ const Projects = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-all capitalize ${
-                activeCategory === category
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all capitalize ${activeCategory === category
                   ? "bg-cyan-500 text-gray-900"
                   : "bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white"
-              }`}
+                }`}
               aria-pressed={activeCategory === category}
               aria-label={`Filter ${category} projects`}
             >
