@@ -100,7 +100,7 @@ const projects = [
   {
     id: 9,
     title: "HyperTrophyGuide",
-    description: "A responsive website built with HTML, Bootstrap, and CSS.",
+    description: "A responsive website, that provides woekout plans built with React + Vite and FastAPI backend.",
     image: HG,
     tags: ["React + Vite", "fastAPI", "CSS"],
     github: "https://github.com/ImmanuelJoya/HyperTrophyGuide",
@@ -131,7 +131,7 @@ const projects = [
     id: 12,
     title: "FetchMusic",
     description: "Download YouTube Music with shared link. React + FastAPI stack with responsive Tailwind styling.",
-    image: "/tesla-clone.jpg", // Fallback example
+    image: "/tesla-clone.jpg",
     tags: ["React", "Tailwind", "FastAPI", "Python", "Axios"],
     github: "https://github.com/ImmanuelJoya/FetchMusic",
     live: "https://fetch-music.vercel.app",
@@ -141,7 +141,7 @@ const projects = [
     id: 13,
     title: "JobMarket",
     description: "A simple full-stack web app built with React + Vite (TypeScript), Tailwind CSS, and an Express.js backend that fetches and displays the latest remote jobs using the Jobicy API.",
-    image: "/tesla-clone.jpg", // Fallback example
+    image: "/tesla-clone.jpg", 
     tags: ["React", "Tailwind", "Express", "TypeScript", "Firebase"],
     github: "https://github.com/ImmanuelJoya/JobMarket",
     live: "/",
