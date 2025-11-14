@@ -34,7 +34,7 @@ const projects = [
     image: c4,
     tags: ["React", "Typescript ", "Tailwind", "Vite"],
     github: "https://github.com/ImmanuelJoya/Connect4",
-    live: "    connect4-lovat-seven.vercel.app",
+    live: "https://connect4-lovat-seven.vercel.app",
     category: "web",
   },
   {
