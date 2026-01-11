@@ -31,14 +31,14 @@ const projects = [
     id: 2,
     title: "YouTubeDownloader",
     description: "A python windows appliaction for downloading mp3 and mp4 from YouTube and YouTube music. light weight coupled with Vue friendly UI",
-    image: ChatBottImg,
+    image: ,
     tags: ["Python", "Pillow", "Tkinter", "yt-dlp", "FFmpeg"],
-    github: "https://github.com/ImmanuelJoya/ChatBottUi",
+    github: "https://github.com/ImmanuelJoya/YoutubeDownloader.git",
     live: "https://chatbott-ypqs.onrender.com",
-    category: "web",
+    category: "all",
   },
   {
-    id: 2,
+    id: 3,
     title: "Connect4",
     description: "Connect 4 game built with React and Tailwind CSS. Features two-player mode, responsive design, and smooth animations.",
     image: c4,
@@ -48,7 +48,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 3,
+    id: 4,
     title: "Doom",
     description: "This project runs Freedoom (a free, open-source Doom-compatible game) in your browser using Chocolate Doom compiled to WebAssembly.",
     image: doom,
@@ -58,7 +58,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 4,
+    id: 5,
     title: "CosmicUpdate",
     description: "YouTube Music downloader with React frontend and FastAPI backend. Built with modern async patterns and responsive design.",
     image: cosmicUpdate,
@@ -68,7 +68,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 5,
+    id: 6,
     title: "Tesla Clone",
     description: "A responsive Tesla website clone built with JavaScript and modern web technologies.",
     image: Tesla,
@@ -78,7 +78,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 6,
+    id: 7,
     title: "Typing Practice",
     description: "A responsive typing practice website built with React+Vite and modern web technologies.",
     image: TP,
@@ -88,7 +88,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 7,
+    id: 8,
     title: "Movie App",
     description: "A responsive movie website built with jQuery, AJAX, and modern web technologies.",
     image: MINFO,
@@ -98,7 +98,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 8,
+    id: 9,
     title: "Responsive Website",
     description: "A responsive website built with HTML and Bootstrap.",
     image: RP,
@@ -108,7 +108,7 @@ const projects = [
     category: "design",
   },
   {
-    id: 9,
+    id: 10,
     title: "HyperTrophyGuide",
     description: "A responsive website, that provides woekout plans built with React + Vite and FastAPI backend.",
     image: HG,
@@ -118,7 +118,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 10,
+    id: 11,
     title: "TaskManager",
     description: "A responsive website created with FastAPI and Python for managing tasks.",
     image: TaskM,
@@ -128,7 +128,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 11,
+    id: 12,
     title: "WWF",
     description: "A responsive website built with HTML, Bootstrap, and CSS.",
     image: WWF,
@@ -138,7 +138,7 @@ const projects = [
     category: "design",
   },
   {
-    id: 12,
+    id: 13,
     title: "FetchMusic",
     description: "Download YouTube Music with shared link. React + FastAPI stack with responsive Tailwind styling.",
     image: "/tesla-clone.jpg",
@@ -148,7 +148,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 13,
+    id: 14,  
     title: "JobMarket",
     description: "A simple full-stack web app built with React + Vite (TypeScript), Tailwind CSS, and an Express.js backend that fetches and displays the latest remote jobs using the Jobicy API.",
     image: "/tesla-clone.jpg", 
