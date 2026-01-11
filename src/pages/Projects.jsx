@@ -32,7 +32,7 @@ const projects = [
     title: "YouTubeDownloader",
     description: "A python windows appliaction for downloading mp3 and mp4 from YouTube and YouTube music. light weight coupled with Vue friendly UI",
     image: ChatBottImg,
-    tags: ["Python", "Pillow", "Tkinter", "yt-dlp", "Tailwind", "Vite", "Neon-Postgress"],
+    tags: ["Python", "Pillow", "Tkinter", "yt-dlp", "FFmpeg"],
     github: "https://github.com/ImmanuelJoya/ChatBottUi",
     live: "https://chatbott-ypqs.onrender.com",
     category: "web",
