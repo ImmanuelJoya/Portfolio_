@@ -29,6 +29,16 @@ const projects = [
   },
   {
     id: 2,
+    title: "YouTubeDownloader",
+    description: "A python windows appliaction for downloading mp3 and mp4 from YouTube and YouTube music. light weight coupled with Vue friendly UI",
+    image: ChatBottImg,
+    tags: ["Python", "Pillow", "Tkinter", "yt-dlp", "Tailwind", "Vite", "Neon-Postgress"],
+    github: "https://github.com/ImmanuelJoya/ChatBottUi",
+    live: "https://chatbott-ypqs.onrender.com",
+    category: "web",
+  },
+  {
+    id: 2,
     title: "Connect4",
     description: "Connect 4 game built with React and Tailwind CSS. Features two-player mode, responsive design, and smooth animations.",
     image: c4,
