@@ -1,5 +1,5 @@
 import { DocumentIcon, HomeIcon, PhoneIcon } from '@heroicons/react/24/outline';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useMotionValueEvent  } from 'framer-motion';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Head from '../assets/images/Head.png';
@@ -60,12 +60,34 @@ const Navbar = () => {
     }
   };
 
+  const { scrollY } = useScroll();
+const [hidden, setHidden] = useState(false);
+
+useMotionValueEvent(scrollY, 'change', (latest) => {
+  const previous = scrollY.getPrevious();
+
+  if (latest > previous && latest > 100) {
+    // scrolling down
+    setHidden(true);
+  } else {
+    // scrolling up
+    setHidden(false);
+  }
+});
+
   return (
     <motion.nav
       className="bg-gradient-to-br from-gray-900 via-black-950 to-black text-white py-4 px-6 fixed w-full top-0 z-50 backdrop-blur-md"
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      // initial={{ y: -100, opacity: 0 }}
+      // animate={{ y: 0, opacity: 1 }}
+      // transition={{ duration: 0.6, ease: "easeOut" }}
+      animate={{
+    y: hidden ? '-110%' : '0%',
+  }}
+  transition={{
+    duration: 0.35,
+    ease: 'easeInOut',
+  }}
     >
       {/* Animated background glow */}
       <motion.div
