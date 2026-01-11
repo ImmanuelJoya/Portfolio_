@@ -14,6 +14,7 @@ import TP from '../assets/images/TP.png';
 import WWF from '../assets/images/WWF.png';
 import doom from '../assets/images/doom.png';
 import c4 from '../assets/images/c4.png';
+import immg from '../assets/images/immg.png';
 
 // Cleaned and consistent project data
 const projects = [
@@ -31,10 +32,10 @@ const projects = [
     id: 2,
     title: "YouTubeDownloader",
     description: "A python windows appliaction for downloading mp3 and mp4 from YouTube and YouTube music. light weight coupled with Vue friendly UI",
-    image: ,
+    image: immg,
     tags: ["Python", "Pillow", "Tkinter", "yt-dlp", "FFmpeg"],
     github: "https://github.com/ImmanuelJoya/YoutubeDownloader.git",
-    live: "https://chatbott-ypqs.onrender.com",
+    live: "https://github.com/ImmanuelJoya/YoutubeDownloader/releases/tag/v1.0.0",
     category: "all",
   },
   {
@@ -60,7 +61,7 @@ const projects = [
   {
     id: 5,
     title: "CosmicUpdate",
-    description: "YouTube Music downloader with React frontend and FastAPI backend. Built with modern async patterns and responsive design.",
+    description: "A responsive news website built with React, FastAPI, and TypeScript that fetches and displays the latest space-related news using the NASA's official API.",
     image: cosmicUpdate,
     tags: ["React", "FastAPI", "TypeScript", "Axios"],
     github: "https://github.com/ImmanuelJoya/CosmicUpdates",
