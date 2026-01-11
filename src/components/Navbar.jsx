@@ -182,81 +182,54 @@ const Navbar = () => {
           </motion.svg>
         </motion.button>
 
-        {/* Enhanced Desktop menu */}
-        <div className="hidden md:flex space-x-2 items-center">
-          {[
-            {
-              to: '/',
-              label: 'Home',
-              icon: <HomeIcon className="h-5 w-5" />,
-              gradient: 'from-cyan-400 to-blue-500',
-              hoverGlow: 'rgba(6,182,212,0.4)'
-            },
-            {
-              to: '/projects',
-              label: 'Projects',
-              icon: <DocumentIcon className="h-5 w-5" />,
-              gradient: 'from-purple-400 to-pink-500',
-              hoverGlow: 'rgba(147,51,234,0.4)'
-            },
-            {
-              to: '/contact',
-              label: 'Contact',
-              icon: <PhoneIcon className="h-5 w-5" />,
-              gradient: 'from-emerald-400 to-teal-500',
-              hoverGlow: 'rgba(16,185,129,0.4)'
-            },
-          ].map((item, index) => (
-            <motion.div
-              key={item.to}
-              className="relative group"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 * index, duration: 0.4 }}
-            >
-              {/* Hover glow effect */}
-              <motion.div
-                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 blur-lg"
-                style={{ backgroundColor: item.hoverGlow }}
-                whileHover={{ scale: 1.2 }}
-                transition={{ duration: 0.3 }}
-              />
+       {/* Desktop segmented navbar */}
+<div className="hidden md:flex items-center">
+  <div className="
+    flex items-center
+    rounded-full
+    border border-white/20
+    bg-white/5 backdrop-blur-xl
+    shadow-lg
+    overflow-hidden
+  ">
+    {[
+      { to: '/', label: 'Home', icon: <HomeIcon className="h-5 w-5" /> },
+      { to: '/projects', label: 'Projects', icon: <DocumentIcon className="h-5 w-5" /> },
+      { to: '/contact', label: 'Contact', icon: <PhoneIcon className="h-5 w-5" /> },
+    ].map((item, index) => (
+      <div key={item.to} className="flex items-center">
+        
+        {/* Button */}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Link
+            to={item.to}
+            className={`
+              flex items-center gap-2 px-6 py-3
+              text-sm font-medium
+              transition-all duration-300
+              ${
+                isActive(item.to)
+                  ? 'text-white bg-white/10'
+                  : 'text-gray-300 hover:text-white'
+              }
+            `}
+          >
+            {item.icon}
+            <span>{item.label}</span>
+          </Link>
+        </motion.div>
 
-              <motion.div
-                whileHover={{ y: -3, scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ duration: 0.2 }}
-                className="relative"
-              >
-                <Link
-                  to={item.to}
-                  className={`relative flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 ${isActive(item.to)
-                    ? `bg-gradient-to-r ${item.gradient} text-white shadow-lg`
-                    : 'text-gray-300 hover:text-white bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-white/20'
-                    }`}
-                >
-                  <motion.div
-                    animate={isActive(item.to) ? { rotate: [0, 360] } : {}}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
-                  >
-                    {item.icon}
-                  </motion.div>
-                  <span className="font-medium tracking-wide">{item.label}</span>
-
-                  {/* Active indicator */}
-                  {isActive(item.to) && (
-                    <motion.div
-                      className="absolute -bottom-1 left-1/2 w-1 h-1 bg-white rounded-full"
-                      initial={{ scale: 0, x: "-50%" }}
-                      animate={{ scale: 1, x: "-50%" }}
-                      layoutId="activeIndicator"
-                    />
-                  )}
-                </Link>
-              </motion.div>
-            </motion.div>
-          ))}
-        </div>
+        {/* Divider (not after last item) */}
+        {index !== 2 && (
+          <div className="h-6 w-px bg-white/20" />
+        )}
+      </div>
+    ))}
+  </div>
+</div>
 
         {/* Enhanced Mobile menu */}
         <motion.div

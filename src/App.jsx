@@ -6,11 +6,14 @@ import SEO from './components/SEO';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import ScrollToTop from './hooks/ScrollToTop';
 
 function App() {
   return (
     <HelmetProvider>
+      
       <Router>
+        <ScrollToTop />
         <div className="min-h-screen bg-gray-900 text-white">
           <SEO />
           <Navbar />
