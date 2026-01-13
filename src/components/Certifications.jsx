@@ -9,6 +9,8 @@ const certifications = [
   { title: "Machine Learning with Python", issuer: "FreeCodeCamp", year: "2025", status: "in-progress" },
   { title: "Docker Foundations Professional", issuer: "LinkedIn", year: "2025", status: "completed" },
   { title: "Time Management Essentials", issuer: "LinkedIn", year: "2025", status: "completed" },
+  { title: "AWS Cloud Practitioner", issuer: "AWS Skill Builder", year: "2025", status: "completed" },
+  { title: "AWS Certified Machine Learning - Specialty", issuer: "AWS Skill Builder", year: "2026", status: "in-progress" }
 ];
 
 const containerVariants = {
@@ -30,10 +32,10 @@ const Certifications = () => {
                          repeating-linear-gradient(90deg, #111827 0px, transparent 1px, transparent 40px, #111827 41px)`,
         opacity: 0.2
       }} />
-      
+
       <div className="max-w-7xl mx-auto relative">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +47,7 @@ const Certifications = () => {
         </motion.div>
 
         {/* Brutalist Grid - Dark Theme */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-gray-700"
           variants={containerVariants}
           initial="hidden"
@@ -60,7 +62,7 @@ const Certifications = () => {
             >
               {/* Status indicator */}
               <div className={`absolute top-3 left-3 w-2 h-2 ${cert.status === 'completed' ? 'bg-cyan-400' : 'bg-amber-400'} rounded-full`} />
-              
+
               {/* Content */}
               <div className="pt-2 flex-1 flex flex-col">
                 <h3 className="text-base font-bold mb-3 leading-snug text-white flex-1">{cert.title}</h3>
