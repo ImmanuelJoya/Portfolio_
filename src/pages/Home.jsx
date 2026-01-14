@@ -70,7 +70,10 @@ const Home = () => {
         <div className="absolute inset-0 z-0">
           <ParticlesBackground />
         </div>
-        <WaveBackground className="absolute inset-0 z-10" />
+
+        {/* waveBegins */}
+
+        <WaveBackground className="absolute inset-0 z-10 relative" />
 
         {/* Animated gradient overlay */}
         <motion.div
