@@ -30,3 +30,7 @@ This portfolio is a personal project built with **React**, **Vite**, and **Tailw
    ```bash
    git clone https://github.com/ImmanuelJoya/Portfolio.git
    cd Portfolio
+
+## Up coming features 
+- Implementaton of React Email
+- SEO optimization
