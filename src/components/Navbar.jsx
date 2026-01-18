@@ -164,45 +164,67 @@ useMotionValueEvent(scrollY, 'change', (latest) => {
           </Link>
         </motion.div>
 
-        {/* Enhanced Mobile menu button */}
-        <motion.button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all duration-300"
-          whileHover={{
-            scale: 1.05,
-            boxShadow: "0 0 20px rgba(0,255,255,0.3)"
-          }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <motion.svg
-            className="h-6 w-6"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            animate={{ rotate: isOpen ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            {isOpen ? (
-              <motion.path
-                d="M6 18L18 6M6 6l12 12"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 0.3 }}
-              />
-            ) : (
-              <motion.g
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              </motion.g>
-            )}
-          </motion.svg>
-        </motion.button>
+      {/* Enhanced Mobile menu button */}
+<motion.button
+  onClick={() => setIsOpen(!isOpen)}
+  aria-label="Toggle menu"
+  className="
+    md:hidden relative p-3 rounded-2xl
+    bg-white/10 backdrop-blur-xl
+    border border-white/20
+    shadow-lg shadow-cyan-500/10
+    hover:bg-white/20
+    focus:outline-none focus:ring-2 focus:ring-cyan-400/50
+    transition-all duration-300
+  "
+  whileHover={{
+    scale: 1.08,
+    boxShadow: "0 0 25px rgba(34,211,238,0.45)",
+  }}
+  whileTap={{ scale: 0.95 }}
+>
+  {/* Glow background */}
+  <motion.div
+    className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400/20 via-blue-500/20 to-purple-500/20 blur-xl"
+    animate={{
+      opacity: isOpen ? 0.9 : 0.5,
+      scale: isOpen ? 1.2 : 1,
+    }}
+    transition={{ duration: 0.4, ease: "easeInOut" }}
+  />
+
+  {/* Icon */}
+  <motion.svg
+    className="relative z-10 h-6 w-6 text-white"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    animate={{ rotate: isOpen ? 180 : 0 }}
+    transition={{ duration: 0.35, ease: "easeInOut" }}
+  >
+    {isOpen ? (
+      <motion.path
+        d="M6 18L18 6M6 6l12 12"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 0.35 }}
+      />
+    ) : (
+      <motion.g
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.25 }}
+      >
+        <path d="M4 6h16" />
+        <path d="M4 12h16" />
+        <path d="M4 18h16" />
+      </motion.g>
+    )}
+  </motion.svg>
+</motion.button>
 
        {/* Desktop segmented navbar */}
 <div className="hidden md:flex items-center">
